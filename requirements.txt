@@ -1,7 +1,6 @@
-random
 pandas
-matplotlib
-seaborn
-sklearn
 numpy
+scikit-learn
+streamlit
 joblib
+seaborn
