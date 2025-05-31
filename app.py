@@ -15,7 +15,7 @@ data = pd.DataFrame()
 
 # Misalkan Anda memuat encoder seperti ini:
 try:
-    encoder_Daytime_evening_attendance = joblib.load('model7/encoder_Daytime_evening_attendance.joblib')
+    encoder_Daytime_evening_attendance = joblib.load('model/encoder_Daytime_evening_attendance.joblib')
     print("Encoder Daytime_evening_attendance berhasil dimuat.") # Konfirmasi pemuatan
 
     # !!! INI YANG PALING PENTING UNTUK DEBUG !!!
@@ -39,7 +39,7 @@ try:
     )
 
 except FileNotFoundError:
-    st.error("File encoder 'model7/encoder_Daytime_evening_attendance.joblib' tidak ditemukan.")
+    st.error("File encoder 'model/encoder_Daytime_evening_attendance.joblib' tidak ditemukan.")
     # Berikan nilai default atau hentikan eksekusi jika perlu
     Daytime_evening_attendance = None # Atau nilai default lain
 except Exception as e:
