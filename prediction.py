@@ -1,7 +1,7 @@
 import joblib
  
 model = joblib.load("model/rdf_model.joblib")
-result_target = joblib.load("model/encoder_target.joblib")
+result_target = joblib.load("model/encoder_Status.joblib")
 
 def prediction(data):
     """Making prediction
