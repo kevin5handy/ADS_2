@@ -10,7 +10,45 @@ with col2:
     st.header('Student Performance App (Prototype)')
 
 data = pd.DataFrame()
- 
+
+# Di dalam file app.py Streamlit Anda
+
+# Misalkan Anda memuat encoder seperti ini:
+try:
+    encoder_Daytime_evening_attendance = joblib.load('model7/encoder_Daytime_evening_attendance.joblib')
+    print("Encoder Daytime_evening_attendance berhasil dimuat.") # Konfirmasi pemuatan
+
+    # !!! INI YANG PALING PENTING UNTUK DEBUG !!!
+    print(f"STREAMLIT DEBUG: encoder_Daytime_evening_attendance.classes_ = {encoder_Daytime_evening_attendance.classes_}")
+    print(f"STREAMLIT DEBUG: Jumlah opsi = {len(encoder_Daytime_evening_attendance.classes_)}")
+
+    # Cek apakah ada cukup opsi sebelum mengatur index
+    options_dea = encoder_Daytime_evening_attendance.classes_
+    default_index_dea = 0 # Default aman
+    if len(options_dea) > 1:
+        default_index_dea = 1 # Hanya gunakan jika ada setidaknya 2 opsi
+    elif not options_dea: # Jika kosong, berikan placeholder
+        options_dea = ["Data tidak tersedia"]
+        default_index_dea = 0
+
+
+    Daytime_evening_attendance = st.selectbox(
+        label='Daytime_evening_attendance',
+        options=options_dea, # Gunakan variabel yang sudah dicek
+        index=default_index_dea # Gunakan indeks yang sudah dicek
+    )
+
+except FileNotFoundError:
+    st.error("File encoder 'model7/encoder_Daytime_evening_attendance.joblib' tidak ditemukan.")
+    # Berikan nilai default atau hentikan eksekusi jika perlu
+    Daytime_evening_attendance = None # Atau nilai default lain
+except Exception as e:
+    st.error(f"Terjadi error saat memuat atau menggunakan encoder: {e}")
+    # Cetak juga isi classes jika objek encoder ada tapi bermasalah
+    if 'encoder_Daytime_evening_attendance' in locals() and hasattr(encoder_Daytime_evening_attendance, 'classes_'):
+        st.write(f"DEBUG saat error: encoder_Daytime_evening_attendance.classes_ = {encoder_Daytime_evening_attendance.classes_}")
+    Daytime_evening_attendance = None # Atau nilai default lain
+
 col1, col2, col3 = st.columns(3)
  
 with col1:
