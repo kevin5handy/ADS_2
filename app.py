@@ -186,8 +186,32 @@ with col3:
 with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
 
+# Di dalam app.py, di dalam blok if st.button('Predict'):
 if st.button('Predict'):
     new_data = data_preprocessing(data=data)
-    with st.expander("View the Preprocessed Data"):
+
+    # --- MULAI BLOK DEBUG ---
+    st.subheader("🔎 DEBUG: Isi `new_data` setelah preprocessing")
+    st.write(f"Nama kolom di `new_data`: {new_data.columns.tolist()}")
+    st.write(f"Jumlah kolom di `new_data`: {len(new_data.columns)}")
+    st.write("Tipe data per kolom di `new_data`:")
+    st.dataframe(new_data.dtypes.astype(str)) # Tampilkan tipe data
+    st.write("5 baris pertama `new_data`:")
+    st.dataframe(new_data.head())
+
+    # Cek spesifik satu kolom kategorikal dan satu numerik
+    if "Application_mode" in new_data.columns:
+        st.write(f"Contoh nilai 'Application_mode' di new_data: {new_data['Application_mode'].iloc[0]}")
+    else:
+        st.write("'Application_mode' tidak ditemukan di new_data.")
+
+    if "Admission_grade" in new_data.columns:
+        st.write(f"Contoh nilai 'Admission_grade' di new_data: {new_data['Admission_grade'].iloc[0]}")
+    else:
+        st.write("'Admission_grade' tidak ditemukan di new_data.")
+    # --- AKHIR BLOK DEBUG ---
+
+    with st.expander("View the Preprocessed Data"): # Expander Anda yang sudah ada
         st.dataframe(data=new_data, width=800, height=10)
-    st.write("Status: {}".format(prediction(new_data)))
+
+    st.write("Status: {}".format(prediction(new_data))) # Ini baris yang error
