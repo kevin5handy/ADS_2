@@ -70,13 +70,13 @@ def data_preprocessing(data):
     df = pd.DataFrame()
     
     # Categorical Columns
-    df["Application_mode"] = encoder_Application_mode.transform(data["Application_mode"])[0]
-    df["Course"] = encoder_Course.transform(data["Course"])[0]
-    df["Daytime_evening_attendance"] = encoder_Daytime_evening_attendance.transform(data["Daytime_evening_attendance"])[0]
-    df["Debtor"] = encoder_Debtor.transform(data["Debtor"])[0]
-    df["Displaced"] = encoder_Displaced.transform(data["Displaced"])[0]
-    df["Educational_special_needs"] = encoder_Educational_special_needs.transform(data["Educational_special_needs"])[0]
-    df["Fathers_occupation"] = encoder_Fathers_occupation.transform(data["Fathers_occupation"])[0]
+    df["Application_mode"] = encoder_Application_mode.transform(data["Application_mode"])
+    df["Course"] = encoder_Course.transform(data["Course"])
+    df["Daytime_evening_attendance"] = encoder_Daytime_evening_attendance.transform(data["Daytime_evening_attendance"])
+    df["Debtor"] = encoder_Debtor.transform(data["Debtor"])
+    df["Displaced"] = encoder_Displaced.transform(data["Displaced"])
+    df["Educational_special_needs"] = encoder_Educational_special_needs.transform(data["Educational_special_needs"])
+    df["Fathers_occupation"] = encoder_Fathers_occupation.transform(data["Fathers_occupation"])
     df["Fathers_qualification"] = encoder_Fathers_qualification.transform(data["Fathers_qualification"])[0]
     df["Gender"] = encoder_Gender.transform(data["Gender"])[0]
     df["International"] = encoder_International.transform(data["International"])[0]
