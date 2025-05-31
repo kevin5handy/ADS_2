@@ -10,7 +10,7 @@ def prediction(data):
         data (Pandas DataFrame): Dataframe that contain all the preprocessed data
  
     Returns:
-        str: Prediction result (Good, Standard, or Poor)
+        str: Prediction result (Graduate, Dropout, Enrolled)
     """
     result = model.predict(data)
     final_result = result_target.inverse_transform(result)[0]
