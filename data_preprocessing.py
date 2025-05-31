@@ -20,7 +20,6 @@ encoder_Mothers_qualification = joblib.load("model/encoder_Mothers_qualification
 encoder_Nacionality = joblib.load("model/encoder_Nacionality.joblib")
 encoder_Previous_qualification = joblib.load("model/encoder_Previous_qualification.joblib")
 encoder_Scholarship_holder = joblib.load("model/encoder_Scholarship_holder.joblib")
-encoder_target = joblib.load("model/encoder_target.joblib")
 encoder_Tuition_fees_up_to_date =joblib.load("model/encoder_Tuition_fees_up_to_date.joblib")
 pca_1 = joblib.load("model/pca_1.joblib")
 rdf_model = joblib.load("model/rdf_model.joblib")
