@@ -1,0 +1,7 @@
+random
+pandas
+matplotlib
+seaborn
+sklearn
+numpy
+joblib
