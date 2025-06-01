@@ -188,7 +188,7 @@ with st.expander("View the Raw Data"):
 
 # Di dalam app.py, di dalam blok if st.button('Predict'):
 if st.button('Predict'):
-    new_data = data_preprocessing(data=data)
+    new_data = data_preprocessing(data_input=data)
 
     # --- MULAI BLOK DEBUG ---
     st.subheader("🔎 DEBUG: Isi `new_data` setelah preprocessing")
