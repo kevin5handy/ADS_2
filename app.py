@@ -22,7 +22,7 @@ with col2:
     data["Course"] = [Course]
  
 with col3:
-    Daytime_evening_attendance = st.selectbox(label='Daytime_evening_attendance', options=encoder_Daytime_evening_attendance.classes_, index=5)
+    Daytime_evening_attendance = st.selectbox(label='Daytime_evening_attendance', options=encoder_Daytime_evening_attendance.classes_, index=1)
     data["Daytime_evening_attendance"] = [Daytime_evening_attendance]
 
 col1, col2, col3 = st.columns(3)
@@ -36,7 +36,7 @@ with col2:
     data["Displaced"] = [Displaced]
  
 with col3:
-    Educational_special_needs = st.selectbox(label='Educational_special_needs', options=encoder_Educational_special_needs.classes_, index=5)
+    Educational_special_needs = st.selectbox(label='Educational_special_needs', options=encoder_Educational_special_needs.classes_, index=1)
     data["Educational_special_needs"] = [Educational_special_needs]
 
 col1, col2, col3 = st.columns(3)
@@ -50,7 +50,7 @@ with col2:
     data["Fathers_qualification"] = [Fathers_qualification]
  
 with col3:
-    Gender = st.selectbox(label='Gender', options=encoder_Gender.classes_, index=5)
+    Gender = st.selectbox(label='Gender', options=encoder_Gender.classes_, index=1)
     data["Gender"] = [Gender]
 
 col1, col2, col3 = st.columns(3)
@@ -64,7 +64,7 @@ with col2:
     data["Marital_status"] = [Marital_status]
  
 with col3:
-    Mothers_occupation = st.selectbox(label='Mothers_occupation', options=encoder_Mothers_occupation.classes_, index=5)
+    Mothers_occupation = st.selectbox(label='Mothers_occupation', options=encoder_Mothers_occupation.classes_, index=1)
     data["Mothers_occupation"] = [Mothers_occupation]
 
 col1, col2, col3 = st.columns(3)
@@ -78,7 +78,7 @@ with col2:
     data["Nacionality"] = [Nacionality]
  
 with col3:
-    Previous_qualification = st.selectbox(label='Previous_qualification', options=encoder_Previous_qualification.classes_, index=5)
+    Previous_qualification = st.selectbox(label='Previous_qualification', options=encoder_Previous_qualification.classes_, index=1)
     data["Previous_qualification"] = [Previous_qualification]
 
 col1, col2= st.columns(2)
