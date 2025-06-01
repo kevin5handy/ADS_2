@@ -70,8 +70,8 @@ def data_preprocessing(data):
     df = pd.DataFrame()
     
     # Categorical Columns
-    df["Marital_status"] = encoder_Marital_status.transform(data["Marital_status"])[0]
-    df["Application_mode"] = encoder_Application_mode.transform(data["Application_mode"])[0]
+    df["Marital_status"] = encoder_Marital_status.transform([data["Marital_status"].iloc[0]])[0]
+    df["Application_mode"] = encoder_Application_mode.transform([data["Application_mode"].iloc[0]])[0]
     df["Application_order"] = scaler_Application_order.transform(np.asarray(data["Application_order"]).reshape(-1,1))[0]
     df["Course"] = encoder_Course.transform(data["Course"])[0]
     df["Daytime_evening_attendance"] = encoder_Daytime_evening_attendance.transform(data["Daytime_evening_attendance"])[0]
