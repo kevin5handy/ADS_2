@@ -45,6 +45,19 @@ scaler_Previous_qualification_grade = joblib.load("model/scaler_Previous_qualifi
 scaler_Unemployment_rate = joblib.load("model/scaler_Unemployment_rate.joblib")
 tree_model = joblib.load("model/tree_model.joblib")
 
+pca_numerical_columns = [
+    'Curricular_units_1st_sem_credited',
+    'Curricular_units_1st_sem_enrolled',
+    'Curricular_units_1st_sem_evaluations',
+    'Curricular_units_1st_sem_approved',
+    'Curricular_units_1st_sem_grade',
+    'Curricular_units_2nd_sem_credited',
+    'Curricular_units_2nd_sem_enrolled',
+    'Curricular_units_2nd_sem_evaluations',
+    'Curricular_units_2nd_sem_approved',
+    'Curricular_units_2nd_sem_grade'
+]
+
 def data_preprocessing(data_input):
     st.write("--- Memulai data_preprocessing ---") # Output akan muncul di UI Streamlit
     print("--- Memulai data_preprocessing ---")   # Output akan muncul di terminal
