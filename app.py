@@ -10,162 +10,184 @@ with col2:
     st.header('Student Performance App (Prototype)')
 
 data = pd.DataFrame()
+ 
+col1, col2, col3 = st.columns(3)
+ 
+with col1:
+    Application_mode = st.selectbox(label='Application_mode', options=encoder_Application_mode.classes_, index=1)
+    data["Application_mode"] = [Application_mode]
+ 
+with col2:
+    Course = st.selectbox(label='Course', options=encoder_Course.classes_, index=1)
+    data["Course"] = [Course]
+ 
+with col3:
+    Daytime_evening_attendance = st.selectbox(label='Daytime_evening_attendance', options=encoder_Daytime_evening_attendance.classes_, index=5)
+    data["Daytime_evening_attendance"] = [Daytime_evening_attendance]
 
 col1, col2, col3 = st.columns(3)
  
 with col1:
-    inputs['Application_mode'] = st.selectbox(label='Application_mode', options=encoder_Application_mode.classes_, index=0, key='1')
+    Debtor = st.selectbox(label='Debtor', options=encoder_Debtor.classes_, index=1)
+    data["Debtor"] = [Debtor]
  
 with col2:
-    inputs['Course'] = st.selectbox(label='Course', options=encoder_Course.classes_, index=0, key='2')
+    Displaced = st.selectbox(label='Displaced', options=encoder_Displaced.classes_, index=1)
+    data["Displaced"] = [Displaced]
  
 with col3:
-    inputs['Daytime_evening_attendance'] = st.selectbox(label='Daytime_evening_attendance', options=encoder_Daytime_evening_attendance.classes_, index=0, key='3')
+    Educational_special_needs = st.selectbox(label='Educational_special_needs', options=encoder_Educational_special_needs.classes_, index=5)
+    data["Educational_special_needs"] = [Educational_special_needs]
 
 col1, col2, col3 = st.columns(3)
  
 with col1:
-    inputs['Debtor'] = st.selectbox(label='Debtor', options=encoder_Debtor.classes_, index=0, key='4')
+    Fathers_occupation = st.selectbox(label='Fathers_occupation', options=encoder_Fathers_occupation.classes_, index=1)
+    data["Fathers_occupation"] = [Fathers_occupation]
  
 with col2:
-    inputs['Displaced'] = st.selectbox(label='Displaced', options=encoder_Displaced.classes_, index=0, key='5')
-
+    Fathers_qualification = st.selectbox(label='Fathers_qualification', options=encoder_Fathers_qualification.classes_, index=1)
+    data["Fathers_qualification"] = [Fathers_qualification]
+ 
 with col3:
-    inputs['Educational_special_needs'] = st.selectbox(label='Educational_special_needs', options=encoder_Educational_special_needs.classes_, index=0, key='6')
+    Gender = st.selectbox(label='Gender', options=encoder_Gender.classes_, index=5)
+    data["Gender"] = [Gender]
 
 col1, col2, col3 = st.columns(3)
  
 with col1:
-    inputs['Fathers_occupation'] = st.selectbox(label='Fathers_occupation', options=encoder_Fathers_occupation.classes_, index=0, key='7')
+    International = st.selectbox(label='International', options=encoder_International.classes_, index=1)
+    data["International"] = [International]
  
 with col2:
-    inputs['Fathers_qualification'] = st.selectbox(label='Fathers_qualification', options=encoder_Fathers_qualification.classes_, index=0, key='8')
-
-with col3:
-    inputs['Gender'] = st.selectbox(label='Gender', options=encoder_Gender.classes_, index=0, key='9')
-
-col1, col2, col3 = st.columns(3)
- 
-with col1:
-    inputs['International'] = st.selectbox(label='International', options=encoder_International.classes_, index=0, key='10')
- 
-with col2:
-    inputs['Marital_status'] = st.selectbox(label='Marital_status', options=encoder_Marital_status.classes_, index=0, key='11')
+    Marital_status = st.selectbox(label='Marital_status', options=encoder_Marital_status.classes_, index=1)
+    data["Marital_status"] = [Marital_status]
  
 with col3:
-    inputs['Mothers_occupation'] = st.selectbox(label='Mothers_occupation', options=encoder_Mothers_occupation.classes_, index=0, key='12')
+    Mothers_occupation = st.selectbox(label='Mothers_occupation', options=encoder_Mothers_occupation.classes_, index=5)
+    data["Mothers_occupation"] = [Mothers_occupation]
 
 col1, col2, col3 = st.columns(3)
  
 with col1:
-    inputs['Mothers_qualification'] = st.selectbox(label='Mothers_qualification', options=encoder_Mothers_qualification.classes_, index=0, key='13')
+    Mothers_qualification = st.selectbox(label='Mothers_qualification', options=encoder_Mothers_qualification.classes_, index=1)
+    data["Mothers_qualification"] = [Mothers_qualification]
  
 with col2:
-    inputs['Nacionality'] = st.selectbox(label='Nacionality', options=encoder_Nacionality.classes_, index=0, key='14')
+    Nacionality = st.selectbox(label='Nacionality', options=encoder_Nacionality.classes_, index=1)
+    data["Nacionality"] = [Nacionality]
  
 with col3:
-    inputs['Previous_qualification'] = st.selectbox(label='Previous_qualification', options=encoder_Previous_qualification.classes_, index=0, key='15')
+    Previous_qualification = st.selectbox(label='Previous_qualification', options=encoder_Previous_qualification.classes_, index=5)
+    data["Previous_qualification"] = [Previous_qualification]
 
 col1, col2= st.columns(2)
  
 with col1:
-    inputs['Scholarship_holder'] = st.selectbox(label='Scholarship_holder', options=encoder_Scholarship_holder.classes_, index=0, key='16')
+    Scholarship_holder = st.selectbox(label='Scholarship_holder', options=encoder_Scholarship_holder.classes_, index=1)
+    data["Scholarship_holder"] = [Scholarship_holder]
  
 with col2:
-    inputs['Tuition_fees_up_to_date'] = st.selectbox(label='Tuition_fees_up_to_date', options=encoder_Tuition_fees_up_to_date.classes_, index=0, key='17')
+    Tuition_fees_up_to_date = st.selectbox(label='Tuition_fees_up_to_date', options=encoder_Tuition_fees_up_to_date.classes_, index=1)
+    data["Tuition_fees_up_to_date"] = [Tuition_fees_up_to_date]
 
 # CC
 
 col1, col2, col3, col4 = st.columns(4)
  
 with col1:
-    inputs['Admission_grade'] = int(st.number_input(label='Admission_grade', value=0, key='18'))   
+       
+    Admission_grade = int(st.number_input(label='Admission_grade', value=0))
+    data["Admission_grade"] = Admission_grade
  
 with col2:
-    inputs['Age_at_enrollment'] = int(st.number_input(label='Age_at_enrollment', value=0, key='19')) 
+    Age_at_enrollment = int(st.number_input(label='Age_at_enrollment', value=0))
+    data["Age_at_enrollment"] = Age_at_enrollment
  
 with col3:
-    inputs['Application_order'] = int(st.number_input(label='Application_order', value=0, key='20')) 
+    Application_order = int(st.number_input(label='Application_order', value=0))
+    data["Application_order"] = Application_order
  
 with col4:
-    inputs['Curricular_units_1st_sem_without_evaluations'] = int(st.number_input(label='Curricular_units_1st_sem_without_evaluations', value=0, key='21')) 
+    Curricular_units_1st_sem_without_evaluations = float(st.number_input(label='Curricular_units_1st_sem_without_evaluations', value=0))
+    data["Curricular_units_1st_sem_without_evaluations"] = Curricular_units_1st_sem_without_evaluations
 
 col1, col2, col3, col4 = st.columns(4)
  
 with col1:
-    inputs['Curricular_units_2nd_sem_without_evaluations'] = int(st.number_input(label='Curricular_units_2nd_sem_without_evaluations', value=0, key='22')) 
-   
+       
+    Curricular_units_2nd_sem_without_evaluations = int(st.number_input(label='Curricular_units_2nd_sem_without_evaluations', value=0))
+    data["Curricular_units_2nd_sem_without_evaluations"] = Curricular_units_2nd_sem_without_evaluations
+ 
 with col2:
-    inputs['GDP'] = int(st.number_input(label='GDP', value=0, key='23')) 
+    GDP = int(st.number_input(label='GDP', value=0))
+    data["GDP"] = GDP
  
 with col3:
-    inputs['Inflation_rate'] = int(st.number_input(label='Inflation_rate', value=0, key='24')) 
+    Inflation_rate = int(st.number_input(label='Inflation_rate', value=0))
+    data["Inflation_rate"] = Inflation_rate
  
 with col4:
-    inputs['Previous_qualification_grade'] = int(st.number_input(label='Previous_qualification_grade', value=0, key='25')) 
+    Previous_qualification_grade = float(st.number_input(label='Previous_qualification_grade', value=0))
+    data["Previous_qualification_grade"] = Previous_qualification_grade
 
 col1, col2, col3, col4 = st.columns(4)
  
 with col1:
-    inputs['Unemployment_rate'] = int(st.number_input(label='Unemployment_rate', value=0, key='26')) 
+       
+    Unemployment_rate = int(st.number_input(label='Unemployment_rate', value=0))
+    data["Unemployment_rate"] = Unemployment_rate
  
 with col2:
-    inputs['Curricular_units_1st_sem_approved'] = int(st.number_input(label='Curricular_units_1st_sem_approved', value=0, key='27'))
-  
+    Curricular_units_1st_sem_approved = int(st.number_input(label='Curricular_units_1st_sem_approved', value=0))
+    data["Curricular_units_1st_sem_approved"] = Curricular_units_1st_sem_approved
+ 
 with col3:
-    inputs['Curricular_units_1st_sem_credited'] = int(st.number_input(label='Curricular_units_1st_sem_credited', value=0, key='28'))
+    Curricular_units_1st_sem_credited = int(st.number_input(label='Curricular_units_1st_sem_credited', value=0))
+    data["Curricular_units_1st_sem_credited"] = Curricular_units_1st_sem_credited
  
 with col4:
-    inputs['Curricular_units_1st_sem_enrolled'] = int(st.number_input(label='Curricular_units_1st_sem_enrolled', value=0, key='29'))
+    Curricular_units_1st_sem_enrolled = float(st.number_input(label='Curricular_units_1st_sem_enrolled', value=0))
+    data["Curricular_units_1st_sem_enrolled"] = Curricular_units_1st_sem_enrolled
 
 col1, col2, col3, col4 = st.columns(4)
  
 with col1:
-    inputs['Curricular_units_1st_sem_evaluations'] = int(st.number_input(label='Curricular_units_1st_sem_evaluations', value=0, key='30'))
-
+       
+    Curricular_units_1st_sem_evaluations = int(st.number_input(label='Curricular_units_1st_sem_evaluations', value=0))
+    data["Curricular_units_1st_sem_evaluations"] = Curricular_units_1st_sem_evaluations
+ 
 with col2:
-    inputs['Curricular_units_1st_sem_grade'] = int(st.number_input(label='Curricular_units_1st_sem_grade', value=0, key='31'))
+    Curricular_units_1st_sem_grade = int(st.number_input(label='Curricular_units_1st_sem_grade', value=0))
+    data["Curricular_units_1st_sem_grade"] = Curricular_units_1st_sem_grade
  
 with col3:
-    inputs['Curricular_units_2nd_sem_approved'] = int(st.number_input(label='Curricular_units_2nd_sem_approved', value=0, key='32'))
+    Curricular_units_2nd_sem_approved = float(st.number_input(label='Curricular_units_2nd_sem_approved', value=0))
+    data["Curricular_units_2nd_sem_approved"] = Curricular_units_2nd_sem_approved
 
 with col4:
-    inputs['Curricular_units_2nd_sem_credited'] = int(st.number_input(label='Curricular_units_2nd_sem_credited', value=0, key='33'))
-
+    Curricular_units_2nd_sem_credited = int(st.number_input(label='Curricular_units_2nd_sem_credited', value=0))
+    data["Curricular_units_2nd_sem_credited"] = Curricular_units_2nd_sem_credited
+ 
 col1, col2, col3 = st.columns(3)
  
 with col1:
-    inputs['Curricular_units_2nd_sem_enrolled'] = int(st.number_input(label='Curricular_units_2nd_sem_enrolled', value=0, key='34'))
-
+    Curricular_units_2nd_sem_enrolled = int(st.number_input(label='Curricular_units_2nd_sem_enrolled', value=0))
+    data["Curricular_units_2nd_sem_enrolled"] = Curricular_units_2nd_sem_enrolled
+ 
 with col2:
-    inputs['Curricular_units_2nd_sem_evaluations'] = int(st.number_input(label='Curricular_units_2nd_sem_evaluations', value=0, key='35'))
+    Curricular_units_2nd_sem_evaluations = int(st.number_input(label='Curricular_units_2nd_sem_evaluations', value=0))
+    data["Curricular_units_2nd_sem_evaluations"] = Curricular_units_2nd_sem_evaluations
 
 with col3:
-    inputs['Curricular_units_2nd_sem_grade'] = int(st.number_input(label='Curricular_units_2nd_sem_grade', value=0, key='36'))
+    Curricular_units_2nd_sem_grade = float(st.number_input(label='Curricular_units_2nd_sem_grade', value=0))
+    data["Curricular_units_2nd_sem_grade"] = Curricular_units_2nd_sem_grade
 
-
-raw_data_df_display = pd.DataFrame([inputs]) # Buat DataFrame dari dictionary untuk ditampilkan
 with st.expander("View the Raw Data"):
-    st.dataframe(data=raw_data_df_display, width=800, height=10) # Tampilkan DataFrame ini
+    st.dataframe(data=data, width=800, height=10)
 
-
-# Di dalam blok if st.button('Predict'):
 if st.button('Predict'):
-    # Buat DataFrame 'data' yang akan dikirim ke preprocessing
-    data_for_preprocessing = pd.DataFrame([inputs]) # Membuat DataFrame dengan 1 baris dari dictionary inputs
-
-    # 'data_for_preprocessing' sekarang adalah DataFrame dengan 1 baris,
-    # di mana setiap sel berisi nilai tunggal (string dari selectbox, angka dari number_input).
-    # Ini sesuai dengan ekspektasi data_preprocessing.py yang dimodifikasi
-    # (yang menggunakan .iloc[0] untuk mengambil nilai dari Series).
-
-    new_data = data_preprocessing(data_input=data_for_preprocessing) # Ganti nama argumen jika perlu
-
-    # --- MULAI BLOK DEBUG ---
-    # ... (kode debug Anda sudah baik) ...
-    # --- AKHIR BLOK DEBUG ---
-
+    new_data = data_preprocessing(data=data)
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
-
     st.write("Status: {}".format(prediction(new_data)))
