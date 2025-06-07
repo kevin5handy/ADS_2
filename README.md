@@ -34,6 +34,7 @@ pip install -r requirements.txt
 Proyek ini menyertakan file database Metabase (`metabase.db.mv.db`) yang berisi semua konfigurasi, pertanyaan, dan dashboard yang telah dibuat.
 
 Link: http://localhost:3000/public/dashboard/7166abdc-7929-40bb-be4f-84e674080889
+
 Untuk mengakses dashboard di atas, Anda harus memastikan bahwa aplikasi Metabase berjalan di komputer lokal Anda. Jika Anda menjalankan Metabase menggunakan Docker, maka Anda perlu menyalakan Docker dan memastikan kontainer Metabase aktif dan berjalan agar dasbor dapat diakses.
 
 Kesimpulan Dashboard:
