@@ -31,8 +31,10 @@ pip install -r requirements.txt
     * Python, Jupyter Notebook/Google Colab, Pandas, NumPy, Matplotlib, Seaborn untuk analisis data awal.
 
 ## Business Dashboard
+Proyek ini menyertakan file database Metabase (`metabase.db.mv.db`) yang berisi semua konfigurasi, pertanyaan, dan dashboard yang telah dibuat.
 
 Link: http://localhost:3000/public/dashboard/7166abdc-7929-40bb-be4f-84e674080889
+Untuk mengakses dashboard di atas, Anda harus memastikan bahwa aplikasi Metabase berjalan di komputer lokal Anda. Jika Anda menjalankan Metabase menggunakan Docker, maka Anda perlu menyalakan Docker dan memastikan kontainer Metabase aktif dan berjalan agar dasbor dapat diakses.
 
 Kesimpulan Dashboard:
     1. 32.1% Siswa terdata melakukan dopout
@@ -46,9 +48,9 @@ Kesimpulan Dashboard:
 1. Buka terminal atau command prompt, navigasi ke direktori utama proyek Anda (tempat file app.py berada).
 2. Jalankan perintah berikut:
 ```bash
-streamlit run app.py
+  streamlit run app.py
 ```
-4. Link Streamlit
+3. Link Streamlit
 https://caoimhin.streamlit.app/
 
 ## Conclusion
