@@ -24,7 +24,6 @@ Sumber data: https://github.com/dicodingacademy/dicoding_dataset/blob/main/stude
 Setup environment:
 ```bash
 pip install -r requirements.txt
-
 ```
 **Tools Utama:**
     * Metabase: Sebagai platform utama untuk pembuatan dashboard dan visualisasi data.
@@ -46,10 +45,10 @@ Kesimpulan Dashboard:
 **Menjalankan Sistem Machine Learning**
 1. Buka terminal atau command prompt, navigasi ke direktori utama proyek Anda (tempat file app.py berada).
 2. Jalankan perintah berikut:
-    ```bash
-        streamlit run app.py
-    ```
-3. Link Streamlit
+```bash
+streamlit run app.py
+```
+4. Link Streamlit
 https://caoimhin.streamlit.app/
 
 ## Conclusion
