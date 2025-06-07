@@ -32,35 +32,15 @@ pip install -r requirements.txt
     * Python, Jupyter Notebook/Google Colab, Pandas, NumPy, Matplotlib, Seaborn untuk analisis data awal.
 
 ## Business Dashboard
-    Proyek ini menyertakan file database Metabase (`metabase.db.mv.db`) yang berisi semua konfigurasi, pertanyaan, dan dashboard yang telah dibuat. Untuk menjalankannya:
 
-    **Jika menggunakan Docker (Direkomendasikan):**
-    1.  Pastikan Docker sudah terinstal di sistem Anda.
-    2.  Salin file `metabase.db.mv.db` ke sebuah direktori di komputer Anda, misalnya `~/metabase-data/`.
-    3.  Jalankan Metabase menggunakan Docker, dengan me-mount file database yang Anda sediakan. Perintah contoh (sesuaikan `~/metabase-data/` dengan path direktori Anda dan `metabase.db.mv.db` dengan nama file yang Anda ekspor):
+Link: http://localhost:3000/public/dashboard/7166abdc-7929-40bb-be4f-84e674080889
 
-        ```bash
-        docker run -d -p 3000:3000 \
-          -v ~/metabase-data:/metabase-data \
-          -e "MB_DB_FILE=/metabase-data/metabase.db.mv.db" \
-          --name metabase-proyek metabase/metabase
-        ```
-        *(Catatan: Pastikan path `-v` dan `MB_DB_FILE` benar).*
-    4.  Setelah container berjalan, buka browser dan akses Metabase di `http://localhost:3000`.
-
-    Link: http://localhost:3000/public/dashboard/7166abdc-7929-40bb-be4f-84e674080889
-
-    Kesimpulan Dashboard:
+Kesimpulan Dashboard:
     1. 32.1% Siswa terdata melakukan dopout
     2. Dropout banyak terjadi pada siswa dengan usia rentang 15-37.5 tahun.
     3. Dropout banyak terjadi pada siswa dengan rentang Admission Grade dan previous qualification grade 100-160.
     4. 90.57% dari siswa dropout adalah siswa yang tidak mendapatkan beasiswa.
     5. 52.9% dari siswa dropout adalah siswa yang tidak mendapatkan displaced.
-
-    Setelah Metabase berhasil dijalankan dengan data proyek (menggunakan `metabase.db.mv.db`):
-    * Akses melalui browser: `http://localhost:3000`
-    * **Email:** `root@mail.com`
-    * **Password:** `root123`
 
 ## Menjalankan Sistem Machine Learning
 **Menjalankan Sistem Machine Learning**
